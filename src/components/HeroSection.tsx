@@ -1,7 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Image from "next/image";
-import Button from "./Button";
 import OptionList from "./OptionList";
 import HeroIntro from "./HeroIntro";
 import OverlayImage from "./OverlayImage";
