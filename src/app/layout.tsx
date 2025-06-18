@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Anton,
+  Poppins,
+  Space_Grotesk,
+} from "next/font/google";
 import "./globals.css";
+import HeroSection from "@/components/HeroSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +17,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-poppins",
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-spaceGrotesk",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${poppins.variable} ${spaceGrotesk.variable}antialiased`}
       >
+        <HeroSection />
         {children}
       </body>
     </html>
