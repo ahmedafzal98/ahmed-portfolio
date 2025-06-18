@@ -14,7 +14,7 @@ const OptionList: React.FC = () => {
           className="flex text-2xl md:text-3xl gap-4 justify-start font-poppins font-bold"
         >
           <span className="text-[#93F203]">{"=>"}</span>
-          <span>{option}</span>
+          <span className="text-white">{option}</span>
         </div>
       ))}
     </div>
