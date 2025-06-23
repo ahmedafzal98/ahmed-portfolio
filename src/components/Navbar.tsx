@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       <div className="flex items-center justify-between  md:justify-around md:mt-5">
         {/* Logo */}
         <div>
-          <span className="text-white font-extrabold font-anton text-3xl">
+          <span className="text-white font-extrabold font-vt323 text-3xl">
             AA.
           </span>
         </div>
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
       >
         <div className="flex items-center justify-between px-6 pt-6">
           <div>
-            <span className="text-[#6805F1] font-extrabold font-anton text-3xl">
+            <span className="text-[#6805F1] font-extrabold font-vt323 text-3xl">
               AA.
             </span>
           </div>

@@ -5,9 +5,11 @@ import {
   Anton,
   Poppins,
   Space_Grotesk,
+  VT323,
 } from "next/font/google";
 import "./globals.css";
 import HeroSection from "@/components/HeroSection";
+import WhatIDoSection from "@/components/WhatIDoSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,11 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-spaceGrotesk",
 });
+const vt323 = VT323({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-vt323",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -46,9 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${poppins.variable} ${spaceGrotesk.variable}antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${poppins.variable} ${spaceGrotesk.variable} ${vt323.variable} antialiased`}
       >
         <HeroSection />
+        <WhatIDoSection />
         {children}
       </body>
     </html>

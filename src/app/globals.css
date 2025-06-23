@@ -13,6 +13,7 @@
   --font-anton: var(--font-anton);
   --font-poppins: var(--font-poppins);
   --font-spaceGrotesk: var(--font-spaceGrotesk);
+  --font-vt323: var(--font-vt323);
 }
 
 @media (prefers-color-scheme: dark) {
