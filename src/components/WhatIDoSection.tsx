@@ -19,7 +19,7 @@ const WhatIDoSection: React.FC = () => {
   ];
 
   return (
-    <div className="px-5 md:px-[10%] mt-[8%]">
+    <div className="px-5 md:px-[8%] mt-[8%]">
       {/* Section Label */}
       <h1 className="text-[#6805F1] text-sm md:text-base font-normal mb-2">
         {`{ What I do }`}
