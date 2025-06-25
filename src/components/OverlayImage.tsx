@@ -5,7 +5,7 @@ import ahmedImage from "../../public/assets/images/ahmed-image.png";
 
 const OverlayImage: React.FC = () => {
   return (
-    <div className="relative md:absolute w-full mt-10 h-auto md:top-50 md:h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative md:absolute w-full mt-10 md:top-50 md:h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
         src={bgImageAhmed}

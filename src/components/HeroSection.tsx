@@ -7,8 +7,8 @@ import LargeName from "./LargeName";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="bg-[url('/assets/images/hero-bg.png')] bg-cover bg-no-repeat h-auto md:h-[100vh] relative overflow-hidden p-3">
-      <div className="min-h-screen md:min-h-full w-full border border-gray-500 rounded-2xl p-3">
+    <div className="bg-[url('/assets/images/hero-bg.png')] bg-cover bg-no-repeat md:h-[100vh] relative overflow-hidden p-3">
+      <div className="md:min-h-full w-full border border-gray-500 rounded-2xl p-3">
         <Navbar />
         <div className="flex justify-center items-center mt-[7%]">
           <div className="w-full text-left md:text-center">
