@@ -13,6 +13,8 @@ import HeroSection from "@/components/HeroSection";
 import WhatIDoSection from "@/components/WhatIDoSection";
 import TechStackSection from "@/components/TechStackSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,7 +68,8 @@ export default function RootLayout({
         <WhatIDoSection />
         <TechStackSection />
         <PortfolioSection />
-        {children}
+        <ContactForm />
+        <Footer />
       </body>
     </html>
   );

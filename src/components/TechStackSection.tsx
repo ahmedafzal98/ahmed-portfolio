@@ -24,7 +24,7 @@ const TechStackSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[url('/assets/images/hero-bg.png')] mt-[5%] bg-cover bg-no-repeat h-auto md:min-h-[600px] relative overflow-hidden p-6">
+    <div className="bg-[url('/assets/images/hero-bg.png')] mt-[5%] bg-cover bg-no-repeat md:min-h-[600px] relative overflow-hidden p-6">
       <div className="w-full border border-gray-500 rounded-2xl p-3 relative">
         {/* JS Icon - Top Left */}
         <div className="absolute top-6 left-6 z-0 opacity-80 pointer-events-none">
