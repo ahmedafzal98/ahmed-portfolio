@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -18,7 +17,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-transparent relative z-50">
-      <div className="flex items-center justify-between  md:justify-around md:mt-5">
+      <div className="flex items-center justify-between md:justify-around md:mt-5">
         {/* Logo */}
         <div>
           <span className="text-white font-extrabold font-vt323 text-3xl">
@@ -26,7 +25,7 @@ const Navbar: React.FC = () => {
           </span>
         </div>
 
-        {/* Hamburger */}
+        {/* Hamburger (Mobile) */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(true)}
@@ -58,22 +57,31 @@ const Navbar: React.FC = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex cursor-pointer w-auto p-3 h-11 items-center justify-center bg-[#6805F1] rounded-full">
+        {/* Desktop Email (Clickable Mailto) */}
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.afzal2070@gmail.com&su=Let's%20Build%20Something%20Awesome!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex cursor-pointer w-auto p-3 h-11 items-center justify-center bg-[#6805F1] rounded-full"
+        >
           <span className="font-poppins font-bold text-white">
             ahmed.afzal2070@gmail.com
           </span>
-        </div>
+        </a>
       </div>
 
+      {/* Backdrop */}
       {isOpen && (
         <div className="fixed inset-0 bg-white bg-opacity-80 z-40 transition-all duration-300" />
       )}
 
+      {/* Mobile Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-full bg-white z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 pt-6">
           <div>
             <span className="text-[#6805F1] font-extrabold font-vt323 text-3xl">
@@ -98,6 +106,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
+        {/* Drawer Body */}
         <div className="flex flex-col items-center gap-6 mt-10 text-black text-2xl font-bold font-poppins w-full px-4">
           {options.map((item, index) => (
             <div key={index} className="w-full text-left">
@@ -105,13 +114,22 @@ const Navbar: React.FC = () => {
               <div className="w-full h-px opacity-50 bg-gray-300 mt-2" />
             </div>
           ))}
-          <div className="mt-10">
+
+          {/* Contact Message */}
+          <div className="mt-10 text-center">
             <span className="text-black text-[20px]">
               Interested in a <br /> Collaboration or Need More Info?
             </span>
-            <div className="mt-8 bg-[#6805F1] mx-6 px-6 py-3 text-white rounded-full text-center text-sm sm:text-base">
+
+            {/* Mobile Email CTA - Mailto */}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.afzal2070@gmail.com&su=Let's%20Build%20Something%20Awesome!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 bg-[#6805F1] mx-6 px-6 py-3 text-white rounded-full text-center text-sm sm:text-base block"
+            >
               ahmed.afzal2070@gmail.com
-            </div>
+            </a>
           </div>
         </div>
       </div>

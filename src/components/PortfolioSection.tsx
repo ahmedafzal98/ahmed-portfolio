@@ -31,7 +31,7 @@ Added user authentication, transaction history, and record tracking features.`,
   return (
     <div className="px-5 md:px-[8%] mt-[8%]">
       <h1 className="text-[#6805F1] text-sm md:text-base font-workSans font-normal mb-2">
-        {`{ Web Dev Portfolio }`}
+        {`{ My Career Journey }`}
       </h1>
 
       <h1 className="text-[#0d0d0d] text-3xl md:text-6xl font-spaceGrotesk font-semibold flex gap-2">

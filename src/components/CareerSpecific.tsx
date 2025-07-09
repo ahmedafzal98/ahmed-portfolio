@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 interface CareerSpecificProps {
   companyName: string;
@@ -14,7 +17,12 @@ const CareerSpecific: React.FC<CareerSpecificProps> = ({
   time,
 }) => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="flex flex-col md:flex-row mt-10 items-start md:items-center justify-between gap-6">
         {/* Left Section */}
         <div className="space-y-2 md:w-[30%] w-full">
@@ -45,7 +53,7 @@ const CareerSpecific: React.FC<CareerSpecificProps> = ({
 
       {/* Divider */}
       <div className="bg-[#F0EFEF] w-full h-0.5 mt-10"></div>
-    </>
+    </motion.div>
   );
 };
 
