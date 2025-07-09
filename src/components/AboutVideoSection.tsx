@@ -22,12 +22,13 @@ const AboutVideoSection: React.FC = () => {
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const section = sectionRef.current;
+    if (section) {
+      observer.observe(section);
     }
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (section) observer.unobserve(section);
     };
   }, []);
 
@@ -96,7 +97,7 @@ const AboutVideoSection: React.FC = () => {
         className="bg-[#F9F9F9] p-6 mt-8 rounded-xl shadow-sm flex flex-col md:flex-row justify-between items-center gap-4"
       >
         <p className="text-[#0d0d0d] font-workSans text-lg md:text-xl text-center md:text-left">
-          Ready to bring your ideas to life? I'm available for freelance
+          Ready to bring your ideas to life? I&apos;m available for freelance
           projects and collaborations.
         </p>
         <a

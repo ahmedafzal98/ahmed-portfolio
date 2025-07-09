@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
       } else {
         setErrors({ api: data.error || "Something went wrong" });
       }
-    } catch (error) {
+    } catch {
       setErrors({ api: "Failed to send. Please try again later." });
     } finally {
       setIsSubmitting(false);
