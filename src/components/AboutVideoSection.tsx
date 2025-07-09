@@ -103,7 +103,7 @@ const AboutVideoSection: React.FC = () => {
           href="#contact"
           className="bg-[#93F203] text-black px-6 py-3 rounded-lg text-sm md:text-base font-semibold hover:opacity-80 transition"
         >
-          Let’s Connect
+          Let&apos;s Connect
         </a>
       </motion.div>
     </section>
