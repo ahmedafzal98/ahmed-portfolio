@@ -84,7 +84,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section className="px-5 md:px-[8%] mt-[8%]">
+    <section id="portfolio" className="px-5 md:px-[8%] mt-[8%]">
       {/* Section Label */}
       <motion.h1
         initial={{ opacity: 0 }}

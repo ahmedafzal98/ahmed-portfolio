@@ -2,9 +2,9 @@ import React from "react";
 
 const OptionList: React.FC = () => {
   const options: string[] = [
-    "UIUX Design",
     "Web Development",
-    "App Development",
+    "RESTful API Integration",
+    "AI-Powered Applications",
   ];
   return (
     <div className="flex flex-col gap-4 md:absolute md:top-[60%]">

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import { z } from "zod";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -17,7 +17,7 @@ const ContactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
-const ContactForm: React.FC = () => {
+const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
   const [UserData, setUserData] = useState({
     name: "",
     email: "",
@@ -80,6 +80,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <motion.div
+      ref={ref}
       className="relative bg-[#6805F1] h-[700px] p-4 mt-[8%] overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -100,7 +101,10 @@ const ContactForm: React.FC = () => {
         alt="Morflax Image"
       />
 
-      <div className="relative z-10 h-full w-full border border-white rounded-2xl flex items-center justify-center">
+      <div
+        id="contact"
+        className="relative z-10 h-full w-full border border-white rounded-2xl flex items-center justify-center"
+      >
         <div className="w-[90%] flex flex-col md:flex-row justify-between items-center gap-10">
           {/* Left Section */}
           <motion.div
@@ -226,6 +230,8 @@ const ContactForm: React.FC = () => {
       </div>
     </motion.div>
   );
-};
+});
+
+ContactForm.displayName = "ContactForm";
 
 export default ContactForm;

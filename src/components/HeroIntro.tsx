@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
 
-const HeroIntro: React.FC = () => {
+interface HeroIntroProps {
+  scrollToContact: () => void;
+}
+const HeroIntro: React.FC<HeroIntroProps> = ({ scrollToContact }) => {
   return (
     <div>
       <p className="mt-6 text-left text-white text-base font-bold md:hidden leading-relaxed">
-        Full stack developer with 7 years of experience in developing robust web
-        applications from front-end to back-end.
+        Full Stack Developer skilled in building robust, scalable web
+        applications, from crafting intuitive user interfaces to developing
+        powerful backend systems. Passionate about clean code and
+        problem-solving.
       </p>
 
       <div className="block md:hidden mt-4">
@@ -17,11 +22,11 @@ const HeroIntro: React.FC = () => {
 
       <div className="hidden md:flex flex-col items-end gap-6 w-[30%] absolute right-10 top-[60%] flex-nowrap font-bold">
         <span className="text-2xl text-white text-right font-medium uppercase font-poppins leading-relaxed">
-          Full stack developer with 7 years <br /> of experience in developing{" "}
-          <br />
-          robust web applications from <br /> front-end to back-end
+          Full stack developer crafting <br /> smart web solutions with seamless
+          UI, <br /> robust backend & modern AI integrations.
         </span>
-        <Button />
+
+        <Button onClick={scrollToContact} title="HIRE ME" />
       </div>
     </div>
   );

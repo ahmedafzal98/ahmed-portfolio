@@ -32,6 +32,7 @@ const WhatIDoSection: React.FC = () => {
   return (
     <motion.section
       initial="hidden"
+      id="services"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       className="px-5 md:px-[8%] mt-[8%]"

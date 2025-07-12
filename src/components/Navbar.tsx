@@ -4,20 +4,31 @@ import React, { useState, useEffect } from "react";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const options: string[] = ["HOME", "SERVICES", "BLOG", "PAGES", "PORTFOLIO"];
+  const options: string[] = [
+    "HOME",
+    "SERVICES",
+    "PORTFOLIO",
+    "SKILLS",
+    "ABOUT",
+    "RESUME",
+    "CONTACT",
+  ];
 
-  // Disable scroll when drawer is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id.toLowerCase());
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <nav className="bg-transparent relative z-50">
-      <div className="flex items-center justify-between md:justify-around md:mt-5">
+    <nav className="bg-transparent sticky top-0 z-50 shadow-lg">
+      <div className="flex items-center justify-between md:justify-around p-4">
         {/* Logo */}
         <div>
           <span className="text-white font-extrabold font-vt323 text-3xl">
@@ -36,7 +47,6 @@ const Navbar: React.FC = () => {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
@@ -49,20 +59,22 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex w-[40%] justify-between font-bold text-[18px] text-white">
+        <div className="hidden md:flex gap-6 font-bold text-[18px] text-white">
           {options.map((item, index) => (
-            <span key={index} className="cursor-pointer">
+            <span
+              key={index}
+              onClick={() => scrollToSection(item)}
+              className="cursor-pointer hover:text-[#93F203] transition-colors"
+            >
               {item}
             </span>
           ))}
         </div>
 
-        {/* Desktop Email (Clickable Mailto) */}
+        {/* Desktop Email */}
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.afzal2070@gmail.com&su=Let's%20Build%20Something%20Awesome!"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex cursor-pointer w-auto p-3 h-11 items-center justify-center bg-[#6805F1] rounded-full"
+          href="mailto:ahmed.afzal2070@gmail.com"
+          className="hidden md:flex cursor-pointer p-3 h-11 items-center justify-center bg-[#6805F1] rounded-full"
         >
           <span className="font-poppins font-bold text-white">
             ahmed.afzal2070@gmail.com
@@ -81,20 +93,16 @@ const Navbar: React.FC = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 pt-6">
-          <div>
-            <span className="text-[#6805F1] font-extrabold font-vt323 text-3xl">
-              AA.
-            </span>
-          </div>
+          <span className="text-[#6805F1] font-extrabold font-vt323 text-3xl">
+            AA.
+          </span>
           <button onClick={() => setIsOpen(false)} className="text-black">
             <svg
               className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
@@ -107,26 +115,30 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Drawer Body */}
-        <div className="flex flex-col items-center gap-6 mt-10 text-black text-2xl font-bold font-poppins w-full px-4">
-          {options.map((item, index) => (
-            <div key={index} className="w-full text-left">
-              <div className="hover:text-[#93F203]">{item}</div>
-              <div className="w-full h-px opacity-50 bg-gray-300 mt-2" />
-            </div>
-          ))}
+        <div className="flex flex-col h-full px-6 pt-10 pb-6 overflow-y-auto justify-between">
+          {/* Top Navigation Links */}
+          <div className="space-y-6">
+            {options.map((item, index) => (
+              <div key={index} className="w-full">
+                <span
+                  onClick={() => scrollToSection(item)}
+                  className="text-2xl font-bold text-black font-poppins cursor-pointer hover:text-[#93F203]"
+                >
+                  {item}
+                </span>
+                <div className="w-full h-px opacity-50 bg-gray-300 mt-2" />
+              </div>
+            ))}
+          </div>
 
-          {/* Contact Message */}
+          {/* Email Fixed at Bottom */}
           <div className="mt-10 text-center">
-            <span className="text-black text-[20px]">
+            <span className="text-black text-[18px]">
               Interested in a <br /> Collaboration or Need More Info?
             </span>
-
-            {/* Mobile Email CTA - Mailto */}
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.afzal2070@gmail.com&su=Let's%20Build%20Something%20Awesome!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 bg-[#6805F1] mx-6 px-6 py-3 text-white rounded-full text-center text-sm sm:text-base block"
+              href="mailto:ahmed.afzal2070@gmail.com"
+              className="mt-4 bg-[#6805F1] px-6 py-3 text-white rounded-full inline-block text-sm sm:text-base"
             >
               ahmed.afzal2070@gmail.com
             </a>

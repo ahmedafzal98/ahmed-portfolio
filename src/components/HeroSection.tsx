@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import OptionList from "./OptionList";
@@ -17,7 +17,11 @@ const fadeOnly = {
   }),
 };
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  scrollToContact: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ scrollToContact }) => {
   return (
     <motion.section
       initial="hidden"
@@ -39,7 +43,7 @@ const HeroSection: React.FC = () => {
 
             {/* Hero Intro */}
             <motion.div variants={fadeOnly} custom={0.4}>
-              <HeroIntro />
+              <HeroIntro scrollToContact={scrollToContact} />
             </motion.div>
 
             <div className="flex flex-col mt-10 gap-5">

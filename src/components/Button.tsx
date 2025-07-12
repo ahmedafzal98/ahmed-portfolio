@@ -1,11 +1,19 @@
 import React from "react";
 
-function Button() {
+interface ButtonProps {
+  onClick: () => void;
+  title: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ onClick, title }) => {
   return (
-    <button className="rounded-full w-[140px] h-[55px] bg-[#93F203]">
-      <span className="text-black font-light">HIRE ME</span>
+    <button
+      onClick={onClick}
+      className="rounded-full cursor-pointer hover:opacity-80 w-[140px] h-[55px] bg-[#93F203] z-[9999] relative pointer-events-auto"
+    >
+      <span className="text-black font-light">{title}</span>
     </button>
   );
-}
+};
 
 export default Button;

@@ -29,7 +29,7 @@ Added user authentication, transaction history, and record tracking features.`,
   ];
 
   return (
-    <div className="px-5 md:px-[8%] mt-[8%]">
+    <div id="resume" className="px-5 md:px-[8%] mt-[8%]">
       <h1 className="text-[#6805F1] text-sm md:text-base font-workSans font-normal mb-2">
         {`{ My Career Journey }`}
       </h1>

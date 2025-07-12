@@ -39,6 +39,7 @@ const TechStackSection: React.FC = () => {
 
   return (
     <motion.div
+      id="skills"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

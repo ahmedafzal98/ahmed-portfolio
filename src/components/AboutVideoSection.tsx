@@ -2,8 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
-const AboutVideoSection: React.FC = () => {
+interface AboutVideoProps {
+  scrollToContact: () => void;
+}
+
+const AboutVideoSection: React.FC<AboutVideoProps> = ({ scrollToContact }) => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [isMuted, setMuted] = useState(true);
@@ -38,6 +43,7 @@ const AboutVideoSection: React.FC = () => {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="px-5 md:px-[8%] mt-[10%] relative z-10"
     >
@@ -99,12 +105,14 @@ const AboutVideoSection: React.FC = () => {
           Ready to bring your ideas to life? I&apos;m available for freelance
           projects and collaborations.
         </p>
-        <a
+
+        <Button onClick={scrollToContact} title="Let's Connect" />
+        {/* <a
           href="#contact"
           className="bg-[#93F203] text-black px-6 py-3 rounded-lg text-sm md:text-base font-semibold hover:opacity-80 transition"
         >
           Let&apos;s Connect
-        </a>
+        </a> */}
       </motion.div>
     </section>
   );
