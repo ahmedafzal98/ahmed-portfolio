@@ -23,7 +23,7 @@ const HeroIntro: React.FC<HeroIntroProps> = ({ scrollToContact }) => {
       <div className="hidden md:flex flex-col items-end gap-6 w-[30%] absolute right-10 top-[60%] flex-nowrap font-bold">
         <span className="text-2xl text-white text-right font-medium uppercase font-poppins leading-relaxed">
           Full stack developer crafting <br /> smart web solutions with seamless
-          UI, <br /> robust backend & modern AI integrations.
+          UI, robust backend & modern AI integrations.
         </span>
 
         <Button onClick={scrollToContact} title="HIRE ME" />
