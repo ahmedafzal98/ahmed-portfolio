@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const options: string[] = [
-    "HOME",
     "SERVICES",
     "PORTFOLIO",
     "SKILLS",
@@ -115,7 +114,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Drawer Body */}
-        <div className="flex flex-col h-full px-6 pt-10 pb-6 overflow-y-auto justify-between">
+        <div className="flex flex-col h-full px-6 pt-10 pb-6 overflow-y-auto">
           {/* Top Navigation Links */}
           <div className="space-y-6">
             {options.map((item, index) => (
