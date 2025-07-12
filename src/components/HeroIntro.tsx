@@ -14,7 +14,7 @@ const HeroIntro: React.FC<HeroIntroProps> = ({ scrollToContact }) => {
         problem-solving.
       </p>
 
-      <div className="block md:hidden mt-4">
+      <div onClick={scrollToContact} className="block md:hidden mt-4">
         <button className="w-full bg-[#93F203] text-black py-3 rounded-full font-bold font-poppins text-center">
           Hire Me
         </button>

@@ -81,7 +81,8 @@ const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <motion.div
       ref={ref}
-      className="relative bg-[#6805F1] h-[700px] p-4 mt-[8%] overflow-hidden"
+      id="contact"
+      className="relative bg-[#6805F1] h-[700px] p-3 mt-[8%] overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -115,15 +116,7 @@ const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="flex flex-col font-spaceGrotesk text-3xl sm:text-4xl md:text-6xl font-semibold leading-[1.1] text-white">
-              <Typewriter
-                words={["Looking to Work", "Together?"]}
-                loop={false}
-                cursor
-                cursorStyle="|"
-                typeSpeed={80}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
+              Looking to Work Together?
             </span>
 
             <span className="font-workSans text-sm sm:text-base md:text-[18px] font-normal text-[#F0EFEF]">
@@ -221,7 +214,7 @@ const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               disabled={isSubmitting}
               className={`mt-6 md:w-full ${
                 isSubmitting ? "opacity-60 cursor-not-allowed" : ""
-              } bg-[#93F203] text-black hover:text-white transition-all ease-in-out cursor-pointer h-12 sm:h-14 flex items-center justify-center rounded-full text-sm sm:text-base`}
+              } bg-[#93F203] text-black hover:text-white transition-all w-full ease-in-out cursor-pointer h-12 sm:h-14 flex items-center justify-center rounded-full text-sm sm:text-base`}
             >
               {isSubmitting ? "Sending..." : "SEND"}
             </button>
