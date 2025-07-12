@@ -49,6 +49,9 @@ const work_sans = Work_Sans({
 export const metadata: Metadata = {
   title: "Ahmed Afzal Portfolio",
   description: "My portfolio built with Next.js and Vercel",
+  icons: {
+    icon: "/aa.ico",
+  },
 };
 
 export default function RootLayout({
@@ -59,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
         {/* Google Analytics Script */}
         <Script
           strategy="afterInteractive"
