@@ -1,8 +1,8 @@
 import React from "react";
+
 interface TechStackProps {
   stack: string;
 }
-
 const TechBadge: React.FC<TechStackProps> = ({ stack }) => {
   return (
     <div className="w-auto flex justify-center items-center rounded-full px-4 py-2 sm:px-5 sm:py-2.5 bg-[#1D1D1D]">

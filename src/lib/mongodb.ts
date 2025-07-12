@@ -6,7 +6,6 @@ if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI in your .env file");
 }
 
-// Define a global type-safe cache
 interface MongooseGlobal {
   conn: Mongoose | null;
   promise: Promise<Mongoose> | null;

@@ -64,7 +64,6 @@ const ContactForm: React.FC = () => {
       });
 
       const data = await res.json();
-
       if (res.ok) {
         setSuccess("Message sent successfully!");
         setUserData({ name: "", email: "", message: "" });
