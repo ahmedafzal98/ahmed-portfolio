@@ -62,7 +62,7 @@ export default function RootLayout({
         {/* Google Analytics Script */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-N9LZ0CL3N0`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-N9LZ0CL3N0`} // ← Replace with your ID
         />
         <Script
           id="gtag-init"
@@ -72,16 +72,13 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-N9LZ0CL3N0, {
-                page_path: window.location.pathname,
-              });
+              gtag('config', 'G-N9LZ0CL3N0');
             `,
           }}
         />
       </head>
       <body>
-        <Analytics />
-        {children}
+        {children} <Analytics />
       </body>
     </html>
   );
