@@ -32,6 +32,16 @@ export default function Hero() {
     }
   };
 
+  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/ahmed-afzal-resume.pdf";
+    link.download = "Ahmed-Afzal-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-electric-50/30">
       {/* Fluid Gradient Mesh - Glassmorphism Effect - Only in Hero with mouse tracking */}
@@ -155,7 +165,8 @@ export default function Hero() {
               <a
                 href="/ahmed-afzal-resume.pdf"
                 download="Ahmed-Afzal-Resume.pdf"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-slate-700 text-white rounded-lg font-semibold text-base shadow-md hover:shadow-lg hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 touch-manipulation inline-flex items-center justify-center gap-2"
+                onClick={handleResumeDownload}
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-slate-700 text-white rounded-lg font-semibold text-base shadow-md hover:shadow-lg hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 touch-manipulation inline-flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 Download Resume

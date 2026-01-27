@@ -36,6 +36,16 @@ export default function Contact() {
     });
   };
 
+  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/ahmed-afzal-resume.pdf";
+    link.download = "Ahmed-Afzal-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -200,7 +210,8 @@ export default function Contact() {
                 <a
                   href="/ahmed-afzal-resume.pdf"
                   download="Ahmed-Afzal-Resume.pdf"
-                  className="text-purple-400 hover:text-purple-300 transition-colors font-medium inline-flex items-center gap-1"
+                  onClick={handleResumeDownload}
+                  className="text-purple-400 hover:text-purple-300 transition-colors font-medium inline-flex items-center gap-1 cursor-pointer"
                 >
                   Download My Resume
                   <Download className="w-4 h-4" />
