@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto, Fira_Code } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -245,6 +246,7 @@ export default function RootLayout({
         className={`${inter.variable} ${roboto.variable} ${firaCode.variable} font-sans antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
