@@ -22,26 +22,80 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahmedafzal.dev"), // Replace with your actual domain
+  metadataBase: new URL("https://ahmedafzal.dev"),
   title: {
-    default: "Ahmed Afzal | Full Stack & AI Engineer | Building Scalable Engines for Agencies",
-    template: "%s | Ahmed Afzal",
+    default: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Software Engineer for UK, Europe & Gulf",
+    template: "%s | Ahmed Afzal - Full Stack Developer",
   },
   description:
-    "Full Stack Engineer specializing in React, Node.js, and AI automation. Available for remote work with UK, Gulf, and European clients. Building scalable engines for agencies.",
+    "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in building scalable web applications, AI-powered solutions, and enterprise software.",
   keywords: [
+    // Core Skills
     "Full Stack Developer",
+    "Full Stack Engineer",
     "AI Engineer",
+    "AI Automation Specialist",
     "React Developer",
-    "Node.js Developer",
-    "Remote Developer",
-    "Freelance Developer",
-    "Software Engineer",
     "Next.js Developer",
+    "Node.js Developer",
     "TypeScript Developer",
-    "AI Automation",
-    "Web Development",
-    "Backend Development",
+    "JavaScript Developer",
+    "MERN Stack Developer",
+    "Software Engineer",
+    "Web Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    // Technologies
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "TypeScript",
+    "Python",
+    "MongoDB",
+    "PostgreSQL",
+    "Firebase",
+    "AWS",
+    "Docker",
+    "LangChain",
+    "OpenAI",
+    "Google Document AI",
+    // Services
+    "Web Development Services",
+    "AI Automation Solutions",
+    "Custom Software Development",
+    "E-commerce Development",
+    "Mobile App Development",
+    "React Native Developer",
+    "API Development",
+    "Cloud Solutions",
+    "DevOps Engineer",
+    // Location & Remote
+    "Remote Developer",
+    "Remote Software Engineer",
+    "Freelance Developer",
+    "Freelance Full Stack Developer",
+    "UK Developer",
+    "Europe Developer",
+    "Gulf Developer",
+    "International Developer",
+    "Remote Work",
+    "Offshore Developer",
+    // Industry Terms
+    "SaaS Development",
+    "Enterprise Software",
+    "Startup Developer",
+    "Agency Developer",
+    "Contract Developer",
+    "Full-time Developer",
+    "Part-time Developer",
+    // Specializations
+    "AI Integration",
+    "Machine Learning Developer",
+    "Document Processing",
+    "OCR Solutions",
+    "Automation Engineer",
+    "Business Process Automation",
   ],
   authors: [{ name: "Ahmed Afzal", url: "https://linkedin.com/in/ahmedafzal-dev" }],
   creator: "Ahmed Afzal",
@@ -60,27 +114,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ahmedafzal.dev", // Replace with your actual domain
-    siteName: "Ahmed Afzal - Portfolio",
-    title: "Ahmed Afzal | Full Stack & AI Engineer | Building Scalable Engines for Agencies",
+    url: "https://ahmedafzal.dev",
+    siteName: "Ahmed Afzal - Full Stack Developer & AI Engineer",
+    title: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Work for UK, Europe & Gulf",
     description:
-      "Full Stack Engineer specializing in React, Node.js, and AI automation. Available for remote work with UK, Gulf, and European clients. Building scalable engines for agencies.",
+      "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in scalable web applications and AI-powered solutions.",
     images: [
       {
-        url: "/og-image.png", // OG image (1200x630px) - Place in /public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ahmed Afzal - Full Stack & AI Engineer Portfolio",
+        alt: "Ahmed Afzal - Full Stack Developer & AI Engineer Portfolio | Remote Developer for UK, Europe & Gulf",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahmed Afzal | Full Stack & AI Engineer",
+    title: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Developer",
     description:
-      "Full Stack Engineer specializing in React, Node.js, and AI automation. Building scalable engines for agencies.",
-    creator: "@ahmedafzal_dev", // Replace with your actual Twitter handle
-    images: ["/og-image.png"], // Same OG image
+      "Professional Full Stack Developer & AI Engineer. Specializing in React, Next.js, Node.js, and AI automation. Available for remote work with UK, Europe, and Gulf clients.",
+    creator: "@ahmedafzal_dev",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://ahmedafzal.dev", // Replace with your actual domain

@@ -75,12 +75,11 @@ export default function AboutMe() {
         <Reveal>
           <div className="text-left mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal-900 mb-3 sm:mb-4 px-2">
-              I bridge the gap between complex code and real-world business
-              efficiency.
+              Full Stack Developer & AI Engineer | Building Scalable Software Solutions
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl px-2">
-              My focus is delivering software that is scalable for the enterprise
-              and profitable for the business owner.
+              Professional Full Stack Developer specializing in React, Next.js, Node.js, and AI automation. 
+              I deliver scalable enterprise software and profitable business solutions for clients worldwide.
             </p>
           </div>
         </Reveal>

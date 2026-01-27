@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ahmedafzal.dev/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+

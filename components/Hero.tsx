@@ -90,7 +90,7 @@ export default function Hero() {
               <Reveal delay={0.2}>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-electric-600 via-teal-600 to-electric-600 bg-clip-text text-transparent">
-                    I Build Scalable Software Solutions.
+                    Full Stack Developer & AI Engineer
                   </span>
                 </h2>
               </Reveal>
@@ -98,10 +98,12 @@ export default function Hero() {
               {/* Bottom Line: The Detail */}
               <Reveal delay={0.3}>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-full lg:max-w-[600px] leading-relaxed font-normal pt-2" style={{ lineHeight: '1.6' }}>
-                  Full Stack Engineer specializing in{" "}
+                  Professional Full Stack Developer specializing in{" "}
                   <span className="font-mono text-electric-700 font-semibold">React</span>,{" "}
+                  <span className="font-mono text-electric-700 font-semibold">Next.js</span>,{" "}
                   <span className="font-mono text-electric-700 font-semibold">Node.js</span>, and{" "}
-                  <span className="font-mono text-teal-700 font-semibold">AI</span>.
+                  <span className="font-mono text-teal-700 font-semibold">AI Automation</span>. 
+                  Available for remote work with clients in UK, Europe, Gulf, and worldwide.
                 </p>
               </Reveal>
             </div>
@@ -114,7 +116,7 @@ export default function Hero() {
                   <div className="relative" style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05))' }}>
                     <Image
                       src="/profile-photo.png"
-                      alt="Ahmed Afzal - Full Stack & AI Engineer"
+                      alt="Ahmed Afzal - Full Stack Developer & AI Engineer | Remote Developer for UK, Europe & Gulf"
                       width={192}
                       height={192}
                       className="object-contain object-bottom"
@@ -177,7 +179,7 @@ export default function Hero() {
                   >
                     <Image
                       src="/profile-photo.png"
-                      alt="Ahmed Afzal - Full Stack & AI Engineer"
+                      alt="Ahmed Afzal - Full Stack Developer & AI Engineer | Remote Software Engineer for UK, Europe & Gulf"
                       width={500}
                       height={900}
                       className="object-contain w-full"
