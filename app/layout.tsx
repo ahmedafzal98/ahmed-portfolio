@@ -130,8 +130,6 @@ export const metadata: Metadata = {
         type: "image/webp",
       },
     ],
-    // Explicitly set image to prevent Facebook from guessing
-    image: "https://www.ahmedafzal.dev/og-image.webp",
   },
   twitter: {
     card: "summary_large_image",
