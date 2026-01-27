@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Ahmed Afzal - Full Stack Developer",
   },
   description:
-    "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in building scalable web applications, AI-powered solutions, and enterprise software.",
+    "Full Stack Engineer (MERN) & AI Specialist. View my projects including a React Native Attendance System and Automated Document Processing pipelines. Available for remote work with clients in UK, Europe, Gulf, and worldwide.",
   keywords: [
     // Core Skills
     "Full Stack Developer",
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
     siteName: "Ahmed Afzal - Full Stack Developer & AI Engineer",
     title: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Work for UK, Europe & Gulf",
     description:
-      "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in scalable web applications and AI-powered solutions.",
+      "Full Stack Engineer (MERN) & AI Specialist. View my projects including a React Native Attendance System and Automated Document Processing pipelines. Available for remote work with clients in UK, Europe, Gulf, and worldwide.",
     images: [
       {
         url: "https://www.ahmedafzal.dev/og-image.webp",
@@ -130,6 +130,8 @@ export const metadata: Metadata = {
         type: "image/webp",
       },
     ],
+    // Explicitly set image to prevent Facebook from guessing
+    image: "https://www.ahmedafzal.dev/og-image.webp",
   },
   twitter: {
     card: "summary_large_image",
