@@ -22,7 +22,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahmedafzal.dev"),
+  metadataBase: new URL("https://www.ahmedafzal.dev"),
   title: {
     default: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Software Engineer for UK, Europe & Gulf",
     template: "%s | Ahmed Afzal - Full Stack Developer",
@@ -114,17 +114,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ahmedafzal.dev",
+    url: "https://www.ahmedafzal.dev",
     siteName: "Ahmed Afzal - Full Stack Developer & AI Engineer",
     title: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Work for UK, Europe & Gulf",
     description:
       "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in scalable web applications and AI-powered solutions.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://ahmedafzal.dev/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Ahmed Afzal - Full Stack Developer & AI Engineer Portfolio | Remote Developer for UK, Europe & Gulf",
+        type: "image/webp",
       },
     ],
   },
@@ -134,7 +135,7 @@ export const metadata: Metadata = {
     description:
       "Professional Full Stack Developer & AI Engineer. Specializing in React, Next.js, Node.js, and AI automation. Available for remote work with UK, Europe, and Gulf clients.",
     creator: "@ahmedafzal_dev",
-    images: ["/og-image.png"],
+    images: ["https://ahmedafzal.dev/og-image.webp"],
   },
   alternates: {
     canonical: "https://ahmedafzal.dev", // Replace with your actual domain
