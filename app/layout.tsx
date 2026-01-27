@@ -135,9 +135,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ahmed Afzal | Full Stack Developer & AI Engineer | Remote Developer",
     description:
-      "Professional Full Stack Developer & AI Engineer. Specializing in React, Next.js, Node.js, and AI automation. Available for remote work with UK, Europe, and Gulf clients.",
+      "Full Stack Engineer (MERN) & AI Specialist. View my projects including a React Native Attendance System and Automated Document Processing pipelines. Available for remote work with UK, Europe, and Gulf clients.",
     creator: "@ahmedafzal_dev",
-    images: ["https://ahmedafzal.dev/og-image.webp"],
+    images: ["https://www.ahmedafzal.dev/og-image.webp"],
   },
   alternates: {
     canonical: "https://www.ahmedafzal.dev",
