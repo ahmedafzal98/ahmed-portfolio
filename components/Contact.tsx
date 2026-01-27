@@ -190,6 +190,25 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* Resume Download */}
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-purple-600/20 rounded-lg">
+                <Download className="w-6 h-6 text-purple-400" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 mb-1">Resume</p>
+                <a
+                  href="/ahmed-afzal-resume.pdf"
+                  download="Ahmed-Afzal-Resume.pdf"
+                  className="text-purple-400 hover:text-purple-300 transition-colors font-medium inline-flex items-center gap-1"
+                >
+                  Download My Resume
+                  <Download className="w-4 h-4" />
+                </a>
+                <p className="text-xs text-gray-500 mt-1">PDF Format • Updated Regularly</p>
+              </div>
+            </div>
+
             {/* Upwork */}
             <div className="flex items-start gap-4">
               <div className="p-3 bg-green-600/20 rounded-lg">

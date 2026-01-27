@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import FluidMesh from "./FluidMesh";
 import Reveal from "./Reveal";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   // Removed duplicate mouse tracking - FluidMesh handles it now
@@ -151,6 +152,14 @@ export default function Hero() {
               >
                 Contact Me
               </button>
+              <a
+                href="/ahmed-afzal-resume.pdf"
+                download="Ahmed-Afzal-Resume.pdf"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-slate-700 text-white rounded-lg font-semibold text-base shadow-md hover:shadow-lg hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 touch-manipulation inline-flex items-center justify-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
+              </a>
               </div>
             </Reveal>
           </div>
