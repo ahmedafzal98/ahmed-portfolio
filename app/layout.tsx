@@ -121,7 +121,7 @@ export const metadata: Metadata = {
       "Professional Full Stack Developer & AI Engineer specializing in React, Next.js, Node.js, and AI automation. Available for remote work with clients in UK, Europe, Gulf, and worldwide. Expert in scalable web applications and AI-powered solutions.",
     images: [
       {
-        url: "https://ahmedafzal.dev/og-image.webp",
+        url: "https://www.ahmedafzal.dev/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Ahmed Afzal - Full Stack Developer & AI Engineer Portfolio | Remote Developer for UK, Europe & Gulf",
@@ -138,7 +138,7 @@ export const metadata: Metadata = {
     images: ["https://ahmedafzal.dev/og-image.webp"],
   },
   alternates: {
-    canonical: "https://ahmedafzal.dev", // Replace with your actual domain
+    canonical: "https://www.ahmedafzal.dev",
   },
   category: "Technology",
   classification: "Portfolio",
@@ -154,6 +154,67 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Structured Data for SEO (JSON-LD)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Afzal",
+    "jobTitle": "Full Stack Developer & AI Engineer",
+    "description": "Professional Full Stack Developer and AI Automation Specialist specializing in React, Next.js, Node.js, and AI solutions. Available for remote work with international clients.",
+    "url": "https://www.ahmedafzal.dev",
+    "image": "https://www.ahmedafzal.dev/profile-photo.png",
+    "email": "ahmed.afzal2070@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK",
+      "addressLocality": "Pakistan"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/ahmedafzal-dev",
+      "https://github.com/ahmedafzal98",
+      "https://www.upwork.com/freelancers/~01c4878170bab8029f"
+    ],
+    "knowsAbout": [
+      "Full Stack Development",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "AI Automation",
+      "Machine Learning",
+      "Web Development",
+      "Software Engineering"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Full Stack Web Development",
+        "description": "Professional web development services including React, Next.js, Node.js, and AI automation solutions"
+      },
+      "areaServed": ["GB", "EU", "AE", "SA", "QA", "KW", "BH", "OM", "Worldwide"],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Remote Work"
+      }
+    }
+  };
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ahmed Afzal - Full Stack Developer",
+    "description": "Full Stack Development and AI Automation Services",
+    "url": "https://www.ahmedafzal.dev",
+    "areaServed": ["United Kingdom", "Europe", "Gulf Countries", "Worldwide"],
+    "serviceType": [
+      "Web Development",
+      "AI Automation",
+      "Full Stack Development",
+      "Software Engineering"
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
@@ -164,7 +225,7 @@ export default function RootLayout({
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
-        <link rel="canonical" href="https://ahmedafzal.dev" />
+        <link rel="canonical" href="https://www.ahmedafzal.dev" />
         {/* Performance: Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
