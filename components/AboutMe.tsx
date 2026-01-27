@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { Code, Rocket, Database, Brain, Cloud, Server, Play, Briefcase, ExternalLink } from "lucide-react";
+import { Code, Rocket, Database, Brain, Cloud, Server, Play, Briefcase, ExternalLink, Download } from "lucide-react";
 import Reveal from "./Reveal";
 
 export default function AboutMe() {
@@ -104,6 +104,18 @@ export default function AboutMe() {
                 My approach combines technical excellence with business acumen—I don&apos;t just write code, 
                 I build systems that solve problems and generate ROI.
               </p>
+              
+              {/* Resume Download Button */}
+              <div className="pt-4 sm:pt-6">
+                <a
+                  href="/ahmed-afzal-resume.pdf"
+                  download="Ahmed-Afzal-Resume.pdf"
+                  className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-electric-600 text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-electric-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span>Download Resume (PDF)</span>
+                </a>
+              </div>
               
               {/* Upwork Trust Badge */}
               <div className="pt-4 sm:pt-6">

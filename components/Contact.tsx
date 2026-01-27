@@ -8,7 +8,6 @@ import {
   Mail,
   Linkedin,
   MapPin,
-  Download,
   Send,
   Github,
   ExternalLink,
@@ -36,15 +35,6 @@ export default function Contact() {
     });
   };
 
-  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const link = document.createElement("a");
-    link.href = "/ahmed-afzal-resume.pdf";
-    link.download = "Ahmed-Afzal-Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -200,26 +190,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Resume Download */}
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-purple-600/20 rounded-lg">
-                <Download className="w-6 h-6 text-purple-400" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-1">Resume</p>
-                <a
-                  href="/ahmed-afzal-resume.pdf"
-                  download="Ahmed-Afzal-Resume.pdf"
-                  onClick={handleResumeDownload}
-                  className="text-purple-400 hover:text-purple-300 transition-colors font-medium inline-flex items-center gap-1 cursor-pointer"
-                >
-                  Download My Resume
-                  <Download className="w-4 h-4" />
-                </a>
-                <p className="text-xs text-gray-500 mt-1">PDF Format • Updated Regularly</p>
-              </div>
-            </div>
-
             {/* Upwork */}
             <div className="flex items-start gap-4">
               <div className="p-3 bg-green-600/20 rounded-lg">
@@ -254,17 +224,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Download Resume Button */}
-            <div className="pt-2 sm:pt-4">
-              <a
-                href="/resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-electric-600 text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-electric-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-              >
-                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="whitespace-nowrap">Download Resume (PDF)</span>
-              </a>
-            </div>
           </motion.div>
 
           {/* Right Column: Contact Form (For Clients) */}
