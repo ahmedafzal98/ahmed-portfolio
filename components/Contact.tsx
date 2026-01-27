@@ -144,7 +144,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-gray-400 mb-1">Email</p>
                 <a
-                  href="mailto:ahmed.afzal2070@gmail.com"
+                  href="mailto:ahmed.afzal2070@gmail.com?subject=Project Inquiry - Ahmed Afzal Portfolio&body=Hi Ahmed,%0A%0AI came across your portfolio and I'm interested in discussing a potential project.%0A%0ABest regards,"
                   className="text-electric-400 hover:text-electric-300 transition-colors font-medium"
                 >
                   ahmed.afzal2070@gmail.com

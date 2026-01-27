@@ -52,11 +52,8 @@ export default function Navbar() {
     const body = encodeURIComponent(
       "Hi Ahmed,\n\nI came across your portfolio and I'm interested in discussing a potential project.\n\nBest regards,"
     );
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    // Use mailto: protocol to open email app on mobile or default email client on desktop
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
 
   return (
