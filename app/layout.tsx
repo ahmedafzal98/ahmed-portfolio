@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto, Fira_Code } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -247,6 +248,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );
