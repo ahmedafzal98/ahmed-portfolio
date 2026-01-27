@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-fira-code: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth scrolling with performance */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  color: #2d2d2d;
+  background: #ffffff;
+  font-family: var(--font-inter);
+  /* Responsive improvements */
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Responsive image and media */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch-friendly tap targets */
+button, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent horizontal scroll on mobile - only for specific elements */
+img, video, iframe, svg {
+  max-width: 100%;
+}
+
+/* Responsive text wrapping */
+p, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+ 
+/* Note:
+   Avoid applying `transform` globally (e.g. `* { transform: translateZ(0) }`).
+   It can break `position: fixed` (navbar) and create excessive compositing work. */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 1s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+/* Fluid Mesh Animations - Optimized for Performance */
+@keyframes fluid-mesh-1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(20px, -20px, 0) scale(1.05);
+  }
+}
+
+@keyframes fluid-mesh-2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-25px, 25px, 0) scale(0.98);
+  }
+}
+
+.fluid-mesh-1 {
+  animation: fluid-mesh-1 30s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  /* Performance: Reduce repaints */
+  contain: layout style paint;
+}
+
+.fluid-mesh-2 {
+  animation: fluid-mesh-2 35s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-delay: -10s;
+  /* Performance: Reduce repaints */
+  contain: layout style paint;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
