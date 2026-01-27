@@ -41,10 +41,13 @@ Google Analytics has been **successfully implemented** in your portfolio website
 3. Go to **Settings** → **Environment Variables**
 4. Add a new variable:
    - **Name:** `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-   - **Value:** `G-XXXXXXXXXX` (your Measurement ID)
+   - **Value:** `G-N9LZ0CL3N0` (your Measurement ID)
    - **Environment:** Select all (Production, Preview, Development)
 5. Click **"Save"**
 6. **Redeploy** your application for changes to take effect
+   - Go to **Deployments** tab
+   - Click the **"..."** menu on the latest deployment
+   - Select **"Redeploy"**
 
 #### Option B: Using Local .env File (For Development)
 
