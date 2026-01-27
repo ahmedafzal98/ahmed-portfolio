@@ -11,7 +11,7 @@ interface RevealProps {
   className?: string;
 }
 
-export default function Reveal({
+const Reveal = memo(function Reveal({
   children,
   delay = 0,
   direction = "up",
@@ -20,7 +20,7 @@ export default function Reveal({
 }: RevealProps) {
   const ref = useRef(null);
   // Optimized: Reduced margin for faster trigger, use once to prevent re-animations
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const directions = {
     up: { y: 30, x: 0 },
@@ -41,11 +41,16 @@ export default function Reveal({
         delay,
         ease: [0.21, 1.11, 0.81, 0.99], // Custom easing for smooth feel
       }}
-      style={{ willChange: 'transform, opacity' }}
+      style={{ 
+        willChange: isInView ? 'transform, opacity' : 'auto',
+        contentVisibility: 'auto', // CSS optimization for off-screen content
+      }}
       className={className}
     >
       {children}
     </motion.div>
   );
-}
+});
+
+export default Reveal;
 

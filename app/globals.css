@@ -12,14 +12,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* Performance: Optimize font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Performance optimizations */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 /* Smooth scrolling with performance */

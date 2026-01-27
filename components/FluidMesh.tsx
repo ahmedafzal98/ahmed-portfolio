@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, memo, useCallback } from "react";
 
 interface FluidMeshProps {
   intensity?: "subtle" | "medium" | "strong";
@@ -13,7 +13,7 @@ interface FluidMeshProps {
   enableMouseTracking?: boolean;
 }
 
-export default function FluidMesh({
+const FluidMesh = memo(function FluidMesh({
   intensity = "subtle",
   colors,
   className = "",
@@ -23,23 +23,24 @@ export default function FluidMesh({
   const rafRef = useRef<number | null>(null);
   const mouseRef = useRef({ x: 50, y: 50 });
 
+  // Optimized mouse tracking with useCallback
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    mouseRef.current = {
+      x: (e.clientX / window.innerWidth) * 100,
+      y: (e.clientY / window.innerHeight) * 100,
+    };
+
+    if (rafRef.current === null) {
+      rafRef.current = requestAnimationFrame(() => {
+        setMousePosition(mouseRef.current);
+        rafRef.current = null;
+      });
+    }
+  }, []);
+
   // Throttled mouse tracking using requestAnimationFrame
   useEffect(() => {
     if (!enableMouseTracking) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = {
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      };
-
-      if (rafRef.current === null) {
-        rafRef.current = requestAnimationFrame(() => {
-          setMousePosition(mouseRef.current);
-          rafRef.current = null;
-        });
-      }
-    };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => {
@@ -48,7 +49,7 @@ export default function FluidMesh({
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, [enableMouseTracking]);
+  }, [enableMouseTracking, handleMouseMove]);
 
   // Intensity-based opacity - Enhanced for better visibility
   const opacityMap = {
@@ -112,5 +113,7 @@ export default function FluidMesh({
       )}
     </div>
   );
-}
+});
+
+export default FluidMesh;
 
