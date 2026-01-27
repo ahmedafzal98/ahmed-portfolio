@@ -22,7 +22,7 @@ const nextConfig = {
   output: 'standalone',
   // Experimental features for performance
   experimental: {
-    optimizeCss: true, // Enable CSS optimization in production
+    // optimizeCss: true, // Disabled - requires 'critters' package and can cause build issues
     optimizePackageImports: ['lucide-react', 'framer-motion'], // Tree-shake unused exports
   },
   // Headers for caching and performance
