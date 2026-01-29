@@ -6,8 +6,14 @@ import PageLoader from "./PageLoader";
 export default function GlobalPageLoader() {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("Loading case study...");
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    
+    // Only set up event listeners on client side
+    if (typeof window === 'undefined') return;
+
     // Listen for show loader event
     const handleShowLoader = (event: CustomEvent) => {
       setIsLoading(true);
@@ -27,6 +33,11 @@ export default function GlobalPageLoader() {
       window.removeEventListener('hidePageLoader', handleHideLoader);
     };
   }, []);
+
+  // Don't render until mounted (client-side only)
+  if (!isMounted) {
+    return null;
+  }
 
   return <PageLoader isLoading={isLoading} message={loadingMessage} />;
 }

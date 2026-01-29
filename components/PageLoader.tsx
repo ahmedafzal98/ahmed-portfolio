@@ -17,6 +17,9 @@ export default function PageLoader({ isLoading, message = "Loading case study...
   }, [isLoading]);
 
   useEffect(() => {
+    // Only set up event listeners on client side
+    if (typeof window === 'undefined') return;
+
     const handleHideLoader = () => {
       setShowLoader(false);
     };

@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Inter, Roboto, Fira_Code } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import dynamic from "next/dynamic";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import GlobalPageLoader from "@/components/GlobalPageLoader";
 import "./globals.css";
+
+// Dynamically import GlobalPageLoader to avoid SSR issues
+const GlobalPageLoader = dynamic(() => import("@/components/GlobalPageLoader"), {
+  ssr: false,
+});
 
 const inter = Inter({
   subsets: ["latin"],
