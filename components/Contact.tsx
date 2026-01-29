@@ -221,6 +221,9 @@ export default function Contact() {
                   Based in Pakistan. Available for Remote Work globally
                   (US, UK, Gulf).
                 </p>
+                <p className="text-sm text-electric-400 mt-2 font-medium">
+                  Working Hours: Available during UK & EU Business Hours (BST/CET)
+                </p>
               </div>
             </div>
 

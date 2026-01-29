@@ -81,7 +81,7 @@ export default function Hero() {
                   className="w-2 h-2 rounded-full bg-green-500"
                 />
                 <span className="font-mono text-sm font-semibold text-teal-600">
-                  Available for Hire
+                  Open to Agency Partnerships
                 </span>
               </div>
             </motion.div>

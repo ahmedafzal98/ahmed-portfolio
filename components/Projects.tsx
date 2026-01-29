@@ -21,12 +21,12 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Intelligent Document Processing Pipeline",
-      tagline: "Eliminating manual data entry with Google Document AI.",
+      title: "Automated Invoice Processing (White Label Ready)",
+      tagline: "Eliminating manual data entry with Google Document AI. Designed for agencies to resell to their enterprise clients.",
       problem:
         "Agency clients were drowning in PDF invoices and manual entry.",
       solution:
-        "Built a pipeline that extracts structured data from PDFs automatically using Google Document AI, reducing processing time by 90%.",
+        "Built a pipeline that extracts structured data from PDFs automatically using Google Document AI, reducing processing time by 90%. White-label ready for agencies to resell to enterprise clients.",
       techStack: ["Python", "Google Cloud Platform (GCP)", "Document AI", "LangChain"],
       links: [
         { label: "View Case Study", icon: FileText, href: "/projects/intelligent-document-processing" },

@@ -32,8 +32,8 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "intelligent-document-processing",
-    title: "Automating Medical Legal Document Processing for Law Firms",
-    oneLiner: "How I built an AI-powered document extraction and matching system that reduced manual data processing by 90% for medical law firms across UK, Europe, and Gulf regions.",
+    title: "Automated Invoice Processing (White Label Ready)",
+    oneLiner: "How I built an AI-powered document extraction and matching system that reduced manual data processing by 90% for medical law firms across UK, Europe, and Gulf regions. Designed for agencies to resell to their enterprise clients.",
     stats: [
       { label: "Time Saved", value: "90%", icon: "⚡" },
       { label: "Cost Reduction", value: "60%", icon: "💰" },
@@ -42,7 +42,7 @@ export const caseStudies: CaseStudy[] = [
     problem: {
       title: "The Problem",
       description:
-        "Medical law firms across UK, Europe, and Gulf regions were drowning in thousands of scanned medical documents and client records. Each firm had dedicated staff members spending 40+ hours weekly manually opening documents, extracting critical client information (client name, client ID, date of birth, date of accident, claim amounts, MRI reports, medical records), and cross-referencing this data against massive spreadsheets containing thousands of client records. This manual process was not only time-consuming and expensive but also prone to human errors that could impact case outcomes. Law firms needed a scalable solution to process multiple documents simultaneously, extract structured data accurately, and automatically match it against existing client databases with confidence scoring.",
+        "Agency clients—medical law firms across UK, Europe, and Gulf regions—were drowning in thousands of scanned medical documents and client records. Each firm had dedicated staff members spending 40+ hours weekly manually opening documents, extracting critical client information (client name, client ID, date of birth, date of accident, claim amounts, MRI reports, medical records), and cross-referencing this data against massive spreadsheets containing thousands of client records. This manual process was not only time-consuming and expensive but also prone to human errors that could impact case outcomes. Law firms needed a scalable solution to process multiple documents simultaneously, extract structured data accurately, and automatically match it against existing client databases with confidence scoring. Agencies recognized this as a high-value opportunity to offer white-label solutions to their enterprise clients.",
     },
     solution: {
       title: "The Engineering Solution",
