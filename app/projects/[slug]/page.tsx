@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Github, ExternalLink, Play, Zap, DollarSign, Bot } from "lucide-react";
 import { getCaseStudyBySlug, getAllCaseStudySlugs } from "@/data/caseStudies";
 import Navbar from "@/components/Navbar";
+import CaseStudyLoader from "@/components/CaseStudyLoader";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-white">
+      <CaseStudyLoader />
       <Navbar />
       
       {/* Structured Data for SEO */}

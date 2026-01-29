@@ -186,10 +186,10 @@ export default function Projects() {
 
   return (
     <section
-      ref={ref}
-      id="projects"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50/50 to-white overflow-hidden"
-    >
+        ref={ref}
+        id="projects"
+        className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50/50 to-white overflow-hidden"
+      >
       {/* Subtle Pattern */}
       <div className="absolute inset-0 opacity-[0.02] z-10">
         <div 
@@ -307,6 +307,12 @@ export default function Projects() {
                           <Link
                             key={linkIndex}
                             href={link.href}
+                            onClick={() => {
+                              // Dispatch global event to show loader
+                              window.dispatchEvent(new CustomEvent('showPageLoader', {
+                                detail: { message: `Loading ${project.title}...` }
+                              }));
+                            }}
                             className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-electric-600 text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-electric-700 transition-colors duration-300 hover:shadow-lg touch-manipulation"
                           >
                             <Icon className="w-4 h-4" />
